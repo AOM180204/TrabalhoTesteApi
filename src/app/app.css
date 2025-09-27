@@ -1,0 +1,35 @@
+.main-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #121212;
+  height: 100vh;
+  color: white;
+}
+
+.input-container{
+  padding : 10px
+}
+
+.card-container{
+  width: 50%;
+}
+
+.search-icon{
+  margin-right: 5px;
+}
+
+.country-image{
+  height: 300px;
+  width: 600px;
+}
+
+.image-container{
+  display: flex;
+  justify-content: center;
+}
+
+.title-group{
+  display: flex;
+  align-items: center;
+}

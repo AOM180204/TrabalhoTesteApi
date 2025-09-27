@@ -1,0 +1,40 @@
+<div class="main-container">
+  <mat-card class="card-container" appearance="outlined">
+
+    <mat-form-field class="input-container">
+      <mat-label>Pesquisar cidade</mat-label>
+      <input matInput placeholder="Ex. Paris"[(ngModel)]="searchValue">
+      <button matSuffix (click)="searchText()" mat-icon-button  class="search-icon"><mat-icon>search</mat-icon></button>
+    </mat-form-field>
+
+    <mat-divider></mat-divider>
+
+    <mat-card-header class="title-group">
+      <mat-card-title-group >
+        <mat-card-title>Nome da cidade</mat-card-title>
+        <mat-card-subtitle>Tempo</mat-card-subtitle>
+      </mat-card-title-group>
+      <p>TempMin</p>
+    </mat-card-header>
+
+    <div class="image-container">
+
+
+
+      @for (local of WInfo; track local.city) {
+        <mat-card style="width: 250px;">
+          <mat-card-header>
+            <mat-card-title>{{ local.city }}</mat-card-title>
+            <mat-card-subtitle>{{ local.Day }}</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <p>Clima: {{ local.condition }}</p>
+            <p>Temp. Mín: {{ local.MinTemperature }}°</p>
+            <p>Temp. Máx: {{ local.MaxTemperature }}°</p>
+          </mat-card-content>
+        </mat-card>
+      }
+
+</div>
+  </mat-card>
+</div>
